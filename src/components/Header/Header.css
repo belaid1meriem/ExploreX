@@ -1,0 +1,108 @@
+.header-container{
+    position:sticky;
+    top: 0;
+    right: 0;
+    z-index:100 ;
+    width: 110vw;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    transition: all .5s ease;
+    /* padding: 1rem; */
+    
+}
+
+.logo{
+    margin-left: 5rem;
+    width: 8%;
+}
+
+.header-list{
+    display: flex;
+    align-items: center;
+}
+
+.header-list li a {
+    margin: 0 1.5rem;
+    color: var(--text-light);
+    font-weight:300;
+    transition: all .6s ease;
+}
+
+.header-list li a:hover{
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.joinus{
+    margin-right: 5rem;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--text-light);
+    background: var(--text-dark);
+    font-weight:300;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    border:none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.joinus:hover {
+    transform: scale(1.05);
+    background: #d65e58;
+}
+
+/* Sparkling layer using ::before */
+.joinus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease;
+}
+
+/* Sparkle effect on hover */
+.joinus:hover::before {
+    opacity: 1;
+    animation: sparkleMove 1.5s linear;
+}
+
+.mg{
+    margin-right: 5rem;
+}
+
+/* Keyframes for the sparkle movement */
+@keyframes sparkleMove {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+@media(max-width: 992px){
+    .none{
+      display: none;
+    }
+    .logo{
+        margin: 0 2rem;
+        width: 25%;
+    }
+    .mg{
+        margin-right: 2rem;
+    }
+    
+    }
