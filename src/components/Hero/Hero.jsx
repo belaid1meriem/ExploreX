@@ -1,8 +1,7 @@
 import './Hero.css'
 import hero from '../../assets/heroPic.svg'
 import line1 from '../../assets/line1.svg'
-import line2 from '../../assets/line2.svg'
-import Stands from '../Stands/Stands';
+
 
 function Hero() {
     const handleClick = () => {

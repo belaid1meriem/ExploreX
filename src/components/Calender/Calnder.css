@@ -1,0 +1,43 @@
+:root {
+  --bg: #0a0c10;
+  --text-light: #fbe8d3; /* Light beige */
+  --text-dark: #ff7069; /* Highlight text */
+}
+
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  flex-direction: column; /* Stack title and images vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background-color: var(--bg);
+  gap: 2rem; /* Space between title and images */
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-light);
+  text-align: start; /* Force align title to the left */
+  align-self: flex-start; /* Explicitly align title to the start */
+}
+
+.highlight-text {
+  color: var(--text-dark); /* Highlighted part in red */
+}
+
+/* Centered Images */
+.calendar-widget {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center images horizontally */
+  gap: 1.5rem; /* Space between images */
+}
+
+.calendar-image {
+  width: 100%;
+  max-width: 600px; /* Increase image size */
+  border-radius: 10px;
+}
