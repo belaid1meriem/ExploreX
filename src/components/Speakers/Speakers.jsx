@@ -1,9 +1,11 @@
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/swiper-bundle.min.css"; // Updated stylesheet for version 6.8.4
+import "swiper/swiper.min.css";
+import { Navigation } from "swiper"; // Swiper modules still available
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./Speakers.css";
+
+import "swiper/css/navigation";
 import "./Speakers.css";
 import haha from "./../../assets/haha.jpg";
 import aim from "./../../assets/aim.jpg";
@@ -11,6 +13,7 @@ import sami from "./../../assets/sami.jpg";
 import taki from "./../../assets/taki.jpg";
 import dja from "./../../assets/dja.jpg";
 import dhayaa from "./../../assets/dhayaa.jpg";
+import { useEffect } from "react";
 
 function Speakers() {
   const speakers = [
